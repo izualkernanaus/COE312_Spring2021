@@ -6,7 +6,7 @@ public class Driver {
 
 	public static void main(String[] args) {
        
-	/*
+	 /*
        // create an instance of an animal
        // in a final exam this is a FAT F.
 	
@@ -25,6 +25,21 @@ public class Driver {
        
        */
 	
+	  // create a snake
+		
+	 /*
+	  Snake s = new Snake();
+	  System.out.println(s.age);  
+	 */
+		
+	  Cobra c = new Cobra();
+	  System.out.println(c.poison_strength);
+	  
+	  
+	  // Rattle snake 2 years old
+	  
+	  Rattle r = new Rattle(1, 2);
+	  System.out.println("age="+r.age+", weight="+r.weight);
 		
 	}
 
