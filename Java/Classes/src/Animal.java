@@ -1,5 +1,6 @@
 
 public abstract class Animal {
+   
    String gender;
    
    // this is an address which is automatically initialized to null
@@ -29,4 +30,8 @@ public abstract class Animal {
 	   this.age= age;
    }
 
+   public String  toString() {
+	   return "me:"+super.toString()+"\nweight:"+weight+"\nage:"+age;
+   }
+   
 }

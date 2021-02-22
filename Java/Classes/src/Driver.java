@@ -2,6 +2,7 @@
 // YES -- for every class we need a separate file
 
 
+
 public class Driver {
 
 	public static void main(String[] args) {
@@ -33,14 +34,48 @@ public class Driver {
 	 */
 		
 	  Cobra c = new Cobra();
-	  System.out.println(c.poison_strength);
+	  //System.out.println(c.poison_strength);
 	  
 	  
 	  // Rattle snake 2 years old
 	  
 	  Rattle r = new Rattle(1, 2);
-	  System.out.println("age="+r.age+", weight="+r.weight);
-		
+	  //System.out.println("age="+r.age+", weight="+r.weight);
+	  
+	  
+	  //print instance of rattle snake
+	  
+	  System.out.println(r); //calls the toString function of r
+	  
+	  // Create an array that contains
+	  // some snakes, some cats, some whales
+	  
+	  // create an array of animals
+	  
+	  //anims is an array of addresses of Animals
+	  //polymorphism
+	  
+	  Animal [] anims = {new Whale(),new Cat(), new Mamba()};
+	  
+	  // print all the animals in this array
+	  
+	  for(int i =0; i<anims.length; i++) {
+		  System.out.println(anims[i]);
+	  }
+	  
+	  Animal a; 
+	  
+	  // Animal address on left side, and Cat Address on the right side
+	  // it works! polymorphism
+	  
+	  a = new Cat(); 
+	  System.out.println(a);
+	  
+	  Cat d;  
+	  d = (Cat) new Mamal();
+	  
+	  
+	  
 	}
 
 }

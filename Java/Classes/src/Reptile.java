@@ -9,5 +9,10 @@ public abstract class Reptile extends Animal {
 		// TODO Auto-generated constructor stub
 		super(weight, age);
 	}
+	
+	// this function has no implementation
+	// no body for the function
+	
+	abstract void  dispense_poison();
 
 }
