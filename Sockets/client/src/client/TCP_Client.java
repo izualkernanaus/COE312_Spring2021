@@ -8,10 +8,10 @@ import java.net.UnknownHostException;
 
 public class TCP_Client implements Runnable {
 	
-	// ip address of the machine 
+	// default ip address of the machine 
     String host = "127.0.0.1";
     
-    // need the port 
+    // need a default port 
     int port = 8080;
     
 	TCP_Client(String host, int port){
