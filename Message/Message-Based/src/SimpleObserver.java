@@ -3,8 +3,6 @@ public class SimpleObserver extends ConcreteObserver implements Runnable {
 	public SimpleObserver(ConcreteSubject[] subjects) {
 		super(subjects);  // have been registered with everyone. 
 		
-		
-		
 		Thread t = new Thread(this);
 		t.start();
 	}
@@ -12,10 +10,13 @@ public class SimpleObserver extends ConcreteObserver implements Runnable {
 
 	@Override
 	public void run() {
+		
+		// to keep it alive ONLY. 
 		while(true) {
 			// do nothing because the message will be automatically printed
 			// through update.
 		}
 	}
 
+	
 }

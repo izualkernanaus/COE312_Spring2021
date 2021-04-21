@@ -3,6 +3,10 @@ public class Message {
 	String topic;
 	String payload;
 	
+	// message is from someone 
+	// about something (topic)
+	// actual message is in payload
+	
 	Message(Object origin, String topic, String payload){
 		this.origin=origin;
 		this.topic=topic;

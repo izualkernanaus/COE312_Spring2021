@@ -4,14 +4,14 @@ public class Driver {
 		
 		TCP_Client phone = new TCP_Client("192.168.0.110", 59699); // to start the server
 		
-		ConcreteSubject[] subjects = {phone};
+		Clock c1 = new Clock(1);
+		Clock c2 = new Clock(2);
+		Clock c3 = new Clock(3);
+		
+		ConcreteSubject[] subjects = {phone,c1,c2,c3};
 		
 		SimpleObserver o1 = new SimpleObserver(subjects);
 		
-////		
-//		Clock c1 = new Clock(1);
-//		Clock c2 = new Clock(2);
-//		Clock c3 = new Clock(3);
 //		
 //		ConcreteSubject[] subjects = {phone,c1, c2, c3};
 		

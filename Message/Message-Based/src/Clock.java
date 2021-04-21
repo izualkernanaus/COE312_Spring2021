@@ -13,10 +13,16 @@ public class Clock extends ConcreteSubject implements Runnable, Observer {
 
 	public void run() {
 
+		System.out.println(this+" clock started");
+		
 		while (true) {
 			
+			// the topic is "time" and payload is "Date"
+			
 			Message m = new Message(this, "time", new Date().toString()); 
-			if (send) publishMessage(m);
+	
+//			if (send) publishMessage(m);
+			publishMessage(m);
 
 			try {
 				Thread.sleep(1000*tick);
@@ -28,7 +34,7 @@ public class Clock extends ConcreteSubject implements Runnable, Observer {
 	}
 
 	@Override
-	public void update(Message m) {
+	public synchronized void update(Message m) {
 		send = false;
 		
 	}
