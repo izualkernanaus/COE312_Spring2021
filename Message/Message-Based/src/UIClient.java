@@ -7,5 +7,6 @@ public class UIClient extends ConcreteObserver{
 		this.subject = subject;
 	}
 	
+	// no update function of my own
 
 }

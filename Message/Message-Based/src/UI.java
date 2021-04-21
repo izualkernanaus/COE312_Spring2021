@@ -17,7 +17,10 @@ public class UI extends ConcreteSubject implements Runnable{
 	public void run() {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);  
-          
+        
+		// reading the white window an sending 
+		// that out as a message 
+		
 		while(true) {
 			
 		Message m = new Message(this, "UI", in.nextLine());

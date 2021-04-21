@@ -11,6 +11,9 @@ public class MoreComplexObserver extends ConcreteObserver implements Runnable {
 	private String time = "";
 	private Object origin=null;
 	
+	// Update is other people sending me 
+	// messages
+	
 	@Override
 	public synchronized void update(Message m) {
 		
@@ -24,16 +27,23 @@ public class MoreComplexObserver extends ConcreteObserver implements Runnable {
 		}
 		else if(m.topic =="speaking") {
 			
-			speaking = m.payload;
+			speaking = m.payload; // yes Not no. 
 		}
 	}
 	
+	// Use variables like "speaking" to communicate betweeen 
+	// what others are saying and what you need to do.
 	
+	
+	// Observer's Own Behavior
 	@Override
 	public void run() {
 		while(true) {
 			try {
 				speaking = "no";
+				
+				// sleep for 5 seconds
+				
 				Thread.sleep(5000);		
 				System.out.println("The last click from clock "+origin+" was at "+time);
 				if(speaking=="no") {
